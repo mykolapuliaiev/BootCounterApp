@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Test Assignment</string>
+    <string name="boot_notification_channel">Boot notification channel</string>
+    <string name="boot_notification_channel_description">Notification channel for boot events</string>
 </resources>
