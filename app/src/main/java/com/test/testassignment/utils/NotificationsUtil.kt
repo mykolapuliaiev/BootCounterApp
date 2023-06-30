@@ -4,6 +4,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import com.test.testassignment.R
 
 class NotificationsUtil(private val context: Context) {
@@ -26,7 +28,21 @@ class NotificationsUtil(private val context: Context) {
         }
     }
 
+    fun displayNotification(text: String) {
+        val buider = NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setContentTitle(context.getString(R.string.boot_notification_title))
+            .setContentText(text)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+        //TODO: maybe must be ongoing?
+
+        with(NotificationManagerCompat.from(context)) {
+            notify(NOTIFICATION_ID, buider.build())
+        }
+    }
+
     companion object {
         const val CHANNEL_ID = "boot_channel"
+        const val NOTIFICATION_ID = 1
     }
 }
