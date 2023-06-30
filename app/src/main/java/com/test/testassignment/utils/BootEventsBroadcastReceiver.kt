@@ -8,6 +8,11 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class BootEventsBroadcastReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        // TODO: make action receiving
+        val action = intent?.action
+
+        if (action == Intent.ACTION_BOOT_COMPLETED) {
+            // todo: track event
+            // todo: show notification
+        }
     }
 }
