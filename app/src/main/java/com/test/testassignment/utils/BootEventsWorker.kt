@@ -35,7 +35,7 @@ class BootEventsWorker @AssistedInject constructor(
             }
         }
 
-        // todo: show notification?
+        NotificationsUtil(applicationContext).displayNotification(text)
 
         return Result.success()
     }

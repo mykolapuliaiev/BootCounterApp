@@ -13,7 +13,11 @@ class NotificationsUtil(private val context: Context) {
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     }
 
-    fun createNotificationChannel() {
+    init {
+        createNotificationChannel()
+    }
+
+    private fun createNotificationChannel() {
         // need to create channel since api 26
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
