@@ -3,4 +3,7 @@
     <string name="boot_notification_channel">Boot notification channel</string>
     <string name="boot_notification_channel_description">Notification channel for boot events</string>
     <string name="boot_notification_title">Boot notification</string>
+    <string name="no_boots_text">No boots detected</string>
+    <string name="one_boot_text">The boot was detected with the timestamp = %s</string>
+    <string name="multiple_boots_text">Last boots time delta = %s</string>
 </resources>
