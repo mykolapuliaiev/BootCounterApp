@@ -39,4 +39,8 @@ class BootEventsWorker @AssistedInject constructor(
 
         return Result.success()
     }
+
+    companion object {
+        const val NAME = "Boot events worker"
+    }
 }
