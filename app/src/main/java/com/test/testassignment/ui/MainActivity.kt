@@ -1,7 +1,8 @@
-package com.test.testassignment
+package com.test.testassignment.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.test.testassignment.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
